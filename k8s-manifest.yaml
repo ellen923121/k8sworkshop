@@ -66,8 +66,6 @@ kind: Service
 metadata:
   name: redis
   labels:
-
-    opentelemetry.io/name: redis
     app.kubernetes.io/instance: hipster-shop
     app.kubernetes.io/component: redis
     app.kubernetes.io/name: redis
@@ -81,8 +79,10 @@ spec:
       targetPort: 6379
       appProtocol: redis
   selector:
-
-    opentelemetry.io/name: redis
+    matchLabels:
+      app: hipster-shop
+      service: redis
+      product: hipster-shop
 ---
 apiVersion: v1
 kind: Service
