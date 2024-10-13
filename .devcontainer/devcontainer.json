@@ -25,12 +25,12 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		80
+		//80
 	],
 
 	// add labels
 	"portsAttributes": {
-		"80": { "label": "easyTrade" }
+		//"80": { "label": "easyTrade" }
 	},
 
 	"hostRequirements": {
