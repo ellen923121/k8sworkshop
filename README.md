@@ -4,7 +4,7 @@
 ## Useful commands
 Forward port
 
-    kubectl -n hipster-shop port-forward svc/frontend 8000:8000
+    kubectl -n hipster-shop port-forward svc/frontend 8000:80
 
 Show log
 
