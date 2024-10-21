@@ -1,18 +1,18 @@
 # The template for this file is available on GitHub: https://github.com/Dynatrace/dynatrace-operator/blob/main/assets/samples/dynakube/cloudNativeFullStack.yaml
 apiVersion: v1
 data:
-  apiToken: ZHQwYzAxLjZFQTVCR1MzM1lDMlRDVlBLUUdJNVVLVS5LVVNaM1ZBTzdXSkZOT0Q2UVg1WUhMQldNV0gyUk5CV0xYMjZXNlZRSVVMTjYzWUU0TEhKQ1lEQkdFT1ZDSzdN
-  dataIngestToken: ZHQwYzAxLjc0UUZSQ1M2VENVTlpJQTZOTk1STFU1WS5NV05MTTZEQ0tTNFdOTVdFMzdOQURKWU81S0dEQUZGUkgyRkdSMlZVNk9PTkJENjZXVzdHN1RSM0hDT0VGSFdQ
+  apiToken: ZHQwYzAxLlVTWUk1NVNSTUo1WDRQWVNaNFk2M0lRRC41RUU1TFFRQjRMUjNJUUdXT0FKTlhBR1hES1pTUk5XVjJaVjJCVTJCTzI0S0EySVpFRlJIRzM0N0w0RU5YN1pU
+  
 kind: Secret
 metadata:
-  name: hipster-shop
+  name: tomcat
   namespace: dynatrace
 type: Opaque
 ---
 apiVersion: dynatrace.com/v1beta2
 kind: DynaKube
 metadata:
-  name: hipster-shop
+  name: tomcat
   namespace: dynatrace
 spec:
   # Dynatrace apiUrl including the `/api` path at the end.
