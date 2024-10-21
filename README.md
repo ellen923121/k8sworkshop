@@ -17,4 +17,5 @@ Other commands
     kubectl -n tomcat-ps  get pods
     kubectl -n tomcat-ps  get svc
     kubectl -n tomcat-ps  port-forward svc/tomcatappsvc XXXXX:80
+    kubectl -n tomcat-ps exec tomcatapp -- cp -r webapps.dist/.  webapps/
     kubectl -n tomcat-ps exec tomcatapp -- ls webapps -la
