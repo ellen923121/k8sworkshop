@@ -18,6 +18,14 @@ spec:
     image: tomcat:latest  # image
     ports:
     - containerPort: 8080
+    lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - |
+                   cp -R  /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
 ---
 apiVersion: v1
 kind: Service
