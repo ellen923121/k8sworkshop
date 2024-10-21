@@ -14,7 +14,6 @@ Show log
 Other commands
 
     kubectl apply -f tomcat.yaml
-    kubectl get pods
     kubectl -n tomcat-ps  get pods
     kubectl -n tomcat-ps  get svc
     kubectl -n tomcat-ps  port-forward svc/tomcatappsvc XXXXX:80
