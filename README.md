@@ -10,3 +10,10 @@ Forward port
 Show log
 
     kubectl -n hipster-shop logs <podname>
+
+Other commands
+
+    kubectl apply -f tomcat.yaml
+    kubectl get pods
+    kubectl -n tomcat-ps  get pods
+    kubectl -n tomcat-ps  get svc
