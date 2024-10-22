@@ -15,11 +15,12 @@ Show log
     
 Other commands
 
-    kubectl apply -f tomcat.yaml
-    kubectl -n tomcat-ps logs <podname>
+    # kubectl apply -f tomcat.yaml
     kubectl -n tomcat-ps  get pods
     kubectl -n tomcat-ps  get svc
     kubectl -n tomcat-ps  port-forward svc/tomcatappsvc XXXXX:80
+    kubectl -n tomcat-ps logs <podname>
+    cat /proc/meminfo
+
     kubectl -n tomcat-ps exec tomcatapp -- cp -r webapps.dist/.  webapps/
     kubectl -n tomcat-ps exec tomcatapp -- ls webapps -la
-    cat /proc/meminfo
