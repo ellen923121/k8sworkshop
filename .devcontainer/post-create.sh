@@ -5,8 +5,7 @@ echo "[post-create] start" >> ~/status
 # Setup Kind
 kind create cluster --config .devcontainer/kind-cluster.yml --wait 300s
 
-# Setup Hipstershop
-# kubectl create ns hipster-shop
-# kubectl -n hipster-shop apply -f k8s-manifest.yaml
+# Setup Applications
+kubectl apply -f tomcat.yaml
 
 echo "[post-create] complete" >> ~/status
