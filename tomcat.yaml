@@ -18,9 +18,9 @@ spec:
     image: tomcat:latest  # image
     resources:
       limits:
-        cpu: 500m
+        cpu: 100m
       requests:
-        cpu: 259m
+        cpu: 50m
     ports:
     - containerPort: 8080
     lifecycle:
