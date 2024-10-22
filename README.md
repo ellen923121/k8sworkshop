@@ -1,26 +1,21 @@
 # k8sworkshop
 
+This project contains a k8s cluster using kind, and deploy a tomcat instance into the cluster.
 
 ## Useful commands
-Forward port
 
-    kubectl -n hipster-shop port-forward svc/frontend 8000:80
-    kubectl -n tomcat port-forward svc/tomcatappsvc 8080:80
+Sample pod related commands
 
-Show log
+    # kubectl apply -f tomcat.yaml
+    kubectl -n tomcat-ps  get pods
+    kubectl -n tomcat-ps  get sv
+    kubectl -n tomcat-ps  port-forward svc/tomcatappsvc XXXXX:80
+    kubectl -n tomcat-ps logs <podname>
+    kubectl -n tomcat-ps exec tomcatapp -- ls webapps -la
+    cat /proc/meminfo
+
+Dynatrace operator related commands
 
     kubectl get pods -n dynatrace
     kubectl describe -n dynatrace  pod tomcat-oneagent-XXXXX
     kubectl -n dynatrace logs -f deployment/dynatrace-operator
-    
-Other commands
-
-    # kubectl apply -f tomcat.yaml
-    kubectl -n tomcat-ps  get pods
-    kubectl -n tomcat-ps  get svc
-    kubectl -n tomcat-ps  port-forward svc/tomcatappsvc XXXXX:80
-    kubectl -n tomcat-ps logs <podname>
-    cat /proc/meminfo
-
-    kubectl -n tomcat-ps exec tomcatapp -- cp -r webapps.dist/.  webapps/
-    kubectl -n tomcat-ps exec tomcatapp -- ls webapps -la
