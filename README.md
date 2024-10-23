@@ -8,7 +8,7 @@ Sample pod related commands
 
     # kubectl apply -f tomcat.yaml
     kubectl -n tomcat-ps  get pods
-    kubectl -n tomcat-ps  get sv
+    kubectl -n tomcat-ps  get svc
     kubectl -n tomcat-ps  port-forward svc/tomcatappsvc <port>:80
     kubectl -n tomcat-ps logs <podname>
     kubectl -n tomcat-ps exec tomcatapp -- ls webapps -la
