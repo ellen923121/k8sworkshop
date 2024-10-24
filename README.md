@@ -19,3 +19,5 @@ Dynatrace operator related commands
     kubectl get pods -n dynatrace
     kubectl describe -n dynatrace  pod tomcat-oneagent-XXXXX
     kubectl -n dynatrace logs -f deployment/dynatrace-operator
+    kubectl exec deploy/dynatrace-operator -n dynatrace -- dynatrace-operator troubleshoot
+    
